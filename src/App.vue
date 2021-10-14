@@ -1,6 +1,7 @@
 <template>
-  <div style="display:flex">
-    <Sheet bgcolor="#3498db" color="white" width="250" height="300">
+<!-- Aufgabe 1 -->
+  <!-- <div style="display:flex">
+    <Sheet bg-color="#3498db" color="white" width="250" height="300">
       <h3>Memo to myself</h3>
       <p>Always prepare for PLFs in time!</p>
       <img src="info.svg" width="80px" />
@@ -11,17 +12,43 @@
       <p>Wish is was there!</p>
       <span style="font-style: italic">E. Wahn</span>
     </Sheet>
+  </div> -->
+
+  <!-- Aufgabe 2 -->
+  <div id="app">
+    <AppLayout>
+      <template v-slot:footer>
+        By Robert Baumgartner
+      </template>
+      <template v-slot:header>
+        I was made with Vue slots!
+      </template>
+      <template v-slot:default>
+        <AppButton><img src="home.svg" /> Home</AppButton>
+      </template>
+    </AppLayout>
   </div>
+
+  <!-- Aufgabe 2: Nein die Reihenfolge spielt keine Rolle da v-slot angibt wo der slot stehen soll
+    z.b: Footer kann auch an erster Stelle stehen und trotzdem ist der Content ganz unten.
+   -->
+
+
+   
 </template>
 
 <script>
-import Sheet from './components/Sheet.vue';
+// import Sheet from './components/Sheet.vue';
+import AppLayout from '@/components/AppLayout.vue';
+import AppButton from '@/components/AppButton.vue';
 
 export default {
   name: 'App',
 
   components: {
-    Sheet,
+    // Sheet,
+    AppLayout,
+    AppButton,
   },
 
   data: () => ({

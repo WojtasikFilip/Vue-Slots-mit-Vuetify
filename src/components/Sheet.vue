@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     slotStyle() {
-      return `background-color:${this.bgColor}; color:${this.color}; width:${this.width}; height:${this.height}`;
+      return `background-color:${this.bgColor}; color:${this.color}; width:${this.width}; height:${this.height}; margin-left:15px;`;
     },
   },
 };
